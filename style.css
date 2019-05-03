@@ -21,24 +21,16 @@
 }
 
 .player-container {
+  position: relative;
+}
+
+.player-container svg {
   position: absolute;
   height: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
-}
-
-.time-select {
-  background: lightblue;
-}
-
-.sound-picker {
-  background: lightgreen;
-}
-
-.player-container {
-  background: coral;
 }
 
 .time-display {
