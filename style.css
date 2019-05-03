@@ -13,7 +13,20 @@
 
 .time-select, .sound-picker, .player-container {
   height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   flex: 1;
+}
+
+.player-container {
+  position: absolute;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 .time-select {
@@ -26,5 +39,53 @@
 
 .player-container {
   background: coral;
+}
+
+.time-display {
+  position: absolute;
+  bottom: 10%;
+  color: white;
+  font-size: 50px;
+}
+
+video {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  z-index: -10;
+}
+
+.time-select button,
+.sound-picker button {
+  background: none;
+  width: 30%;
+  height: 10%;
+  color: white;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 5px;
+  font-size: 20px;
+  transition: all 0.5s ease;
+}
+
+.time-select button:hover {
+  color: black;
+  background: white;
+}
+
+.sound-picker button {
+  border: none;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+
+.sound-picker button:nth-child(1){
+  background: #4972a1;
+}
+
+.sound-picker button:nth-child(2){
+  background: #a14f49;
 }
 
